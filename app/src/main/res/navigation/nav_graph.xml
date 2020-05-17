@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.wa2c.android.medoly.plugin.action.avcontrol.ui.MainFragment"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/action_mainFragment_to_informationFragment"
+            app:destination="@id/informationFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="com.wa2c.android.medoly.plugin.action.avcontrol.ui.InformationFragment"
+        android:label="InformationFragment" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.wa2c.android.medoly.plugin.action.avcontrol.ui.SettingFragment"
+        android:label="SettingFragment" />
+
+</navigation>

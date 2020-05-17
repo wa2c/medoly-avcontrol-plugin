@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Package -->
+    <string name="app_description">YAMAHA AVアンプの入力ソースを切り替えます。</string>
+    <string name="label_execute_set_bluetooth">Bluetooth選択</string>
+    <string name="label_execute_reset_input">入力ソースを戻す</string>
+
+    <!-- Screen -->
+    <string name="screen_title_main">@string/app_name</string>
+    <string name="screen_title_setting">設定</string>
+    <string name="screen_title_info">情報</string>
+
+    <!-- Message -->
+    <string name="medoly_launch_failed_message">Medolyの起動に失敗しました。</string>
+    <string name="action_succeeded_message">成功しました。</string>
+    <string name="action_failed_message">失敗しました。</string>
+    <string name="detect_device_failed">デバイスの検出に失敗しました。</string>
+
+    <!-- Label -->
+    <string name="pref_summary_current_value">[現在の値: %1$s]</string>
+
+    <!-- Preferences -->
+
+    <!-- Main Preferences -->
+    <string name="pref_title_open_setting">@string/screen_title_setting</string>
+    <string name="pref_summary_open_setting">情報画面を開きます。</string>
+    <string name="pref_title_open_info">@string/screen_title_info</string>
+    <string name="pref_summary_open_info">情報画面を開きます。</string>
+    <string name="pref_title_launch_medoly">Medoly</string>
+    <string name="pref_summary_launch_medoly">Medolyを起動します。</string>
+
+    <!-- Settng Preferences -->
+    <string name="pref_title_set_host">ホスト設定</string>
+    <string name="pref_summary_set_host">AVアンプのホストアドレスを設定します。</string>
+    <string name="pref_title_show_success_message">成功メッセージ表示</string>
+    <string name="pref_summary_show_success_message">アクションが成功した時にメッセージを表示します。</string>
+    <string name="pref_title_show_failure_message">失敗メッセージ表示</string>
+    <string name="pref_summary_show_failure_message">アクションが失敗した時にメッセージを表示します。</string>
+
+    <!-- Info Preferences -->
+    <string name="pref_title_info_app_version">アプリバージョン</string>
+    <string name="pref_summary_info_app_version" />
+    <string name="pref_title_open_author">開発者</string>
+    <string name="pref_summary_open_author">@string/app_author</string>
+    <string name="pref_title_open_app_license">ライセンス</string>
+    <string name="pref_summary_open_app_license">@string/app_license</string>
+    <string name="pref_title_open_library_license">オープンソースライセンス</string>
+    <string name="pref_summary_open_library_license">オープンソースライセンスを表示します。</string>
+    <string name="pref_title_open_privacy_policy">プライバシーポリシー</string>
+    <string name="pref_summary_open_privacy_policy">プライバシーポリシーを表示します。</string>
+    <string name="pref_title_open_info_app">アプリ情報</string>
+    <string name="pref_summary_open_info_app">OSのアプリ情報を開きます。</string>
+    <string name="pref_title_open_store">Google Play</string>
+    <string name="pref_summary_open_store">Google Playを開きます。</string>
+
+    <!-- Host Input Dialog -->
+    <string name="dialog_host_input_title">対象ホスト入力</string>
+    <string name="dialog_host_input_hint">ホスト (IPアドレス)</string>
+    <string name="dialog_host_input_device">検出された機器</string>
+
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="@string/pref_key_set_host"
+        android:summary="@string/pref_summary_set_host"
+        android:title="@string/pref_title_set_host" />
+
+    <CheckBoxPreference
+        android:defaultValue="@bool/pref_default_show_success_message"
+        android:key="@string/pref_key_show_success_message"
+        android:summary="@string/pref_summary_show_success_message"
+        android:title="@string/pref_title_show_success_message" />
+
+    <CheckBoxPreference
+        android:defaultValue="@bool/pref_default_show_failure_message"
+        android:key="@string/pref_key_show_failure_message"
+        android:summary="@string/pref_summary_show_failure_message"
+        android:title="@string/pref_title_show_failure_message"
+        />
+
+</PreferenceScreen>

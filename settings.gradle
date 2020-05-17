@@ -1,0 +1,2 @@
+rootProject.name='MedolyYamahaAVControlPlugin'
+include ':app'

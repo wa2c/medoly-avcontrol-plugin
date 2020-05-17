@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Package -->
+    <string name="app_description">Change YAMAHA AV receiver input source.</string>
+    <string name="label_execute_set_bluetooth">Select Bluetooth</string>
+    <string name="label_execute_reset_input">Reset Input</string>
+
+    <!-- Screen -->
+    <string name="screen_title_main">@string/app_name</string>
+    <string name="screen_title_setting">Setting</string>
+    <string name="screen_title_info">Information</string>
+
+    <!-- Message -->
+    <string name="medoly_launch_failed_message">Failed to launch medoly.</string>
+    <string name="action_succeeded_message">Action succeeded.</string>
+    <string name="action_failed_message">Action failed.</string>
+    <string name="detect_device_failed">Failed to detect devices.</string>
+
+    <!-- Label -->
+    <string name="pref_summary_current_value">[Current Value: %1$s]</string>
+
+    <!-- Preferences -->
+
+    <!-- Main Preference -->
+    <string name="pref_title_open_setting">@string/screen_title_setting</string>
+    <string name="pref_summary_open_setting">Open setting screen</string>
+    <string name="pref_title_open_info">@string/screen_title_info</string>
+    <string name="pref_summary_open_info">Open information screen.</string>
+    <string name="pref_title_launch_medoly">Medoly</string>
+    <string name="pref_summary_launch_medoly">Launch medoly.</string>
+
+    <!-- Setting Preferences -->
+    <string name="pref_title_set_host">Host Address</string>
+    <string name="pref_summary_set_host">Set the host address of AV receiver.</string>
+    <string name="pref_title_show_success_message">Show Success Message</string>
+    <string name="pref_summary_show_success_message">Show message when action successful.</string>
+    <string name="pref_title_show_failure_message">Show Failure Message</string>
+    <string name="pref_summary_show_failure_message">Show message when action fails.</string>
+
+    <!-- Info Preferences -->
+    <string name="pref_title_info_app_version">App Version</string>
+    <string name="pref_summary_info_app_version" />
+    <string name="pref_title_open_author">Author</string>
+    <string name="pref_summary_open_author">@string/app_author</string>
+    <string name="pref_title_open_app_license">License</string>
+    <string name="pref_summary_open_app_license">@string/app_license</string>
+    <string name="pref_title_open_library_license">Open Source License</string>
+    <string name="pref_summary_open_library_license">Show open source license.</string>
+    <string name="pref_title_open_privacy_policy">Privacy Policy</string>
+    <string name="pref_summary_open_privacy_policy">Show privacy policy.</string>
+    <string name="pref_title_open_info_app">App Info</string>
+    <string name="pref_summary_open_info_app">Open OS app info.</string>
+    <string name="pref_title_open_store">Google Play</string>
+    <string name="pref_summary_open_store">Open Google Play Store.</string>
+
+    <!-- About Dialog -->
+    <string name="dialog_host_input_title">Host device</string>
+    <string name="dialog_host_input_hint">Host (IP address)</string>
+    <string name="dialog_host_input_device">Detected devices</string>
+
+</resources>

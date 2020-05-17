@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <!-- App Info -->
+    <string name="app_name">Medoly AV Control Plugin</string>
+    <string name="app_package_name">com.wa2c.android.medoly.plugin.action.avcontrol</string>
+    <string name="app_author">wa2c</string>
+    <string name="app_author_url">https://github.com/wa2c</string>
+    <string name="app_store_url">https://play.google.com/store/apps/details?id=com.wa2c.android.medoly.plugin.action.avcontrol</string>
+    <string name="app_privacy_policy_url" />
+    <string name="app_license">MIT License</string>
+    <string name="app_license_url">https://github.com/wa2c/medoly-avcontrol-plugin/blob/master/LICENSE</string>
+
+    <!-- Main Preferences -->
+    <string name="pref_key_open_setting">pref_key_open_setting</string>
+    <string name="pref_key_open_info">pref_key_open_info</string>
+    <string name="pref_key_launch_medoly">pref_key_launch_medoly</string>
+
+    <!-- Setting Preferences -->
+    <string name="pref_key_set_host">pref_key_set_host</string>
+    <string name="pref_key_show_success_message">pref_key_show_success_message</string>
+    <string name="pref_key_show_failure_message">pref_key_show_failure_message</string>
+
+    <!-- Info Preferences -->
+    <string name="pref_key_info_app_version">pref_key_app_version</string>
+    <string name="pref_key_open_author">pref_key_app_author</string>
+    <string name="pref_key_open_app_license">pref_key_license</string>
+    <string name="pref_key_open_library_license">pref_key_library_license</string>
+    <string name="pref_key_open_privacy_policy">pref_key_privacy_policy</string>
+    <string name="pref_key_open_info_app">pref_key_app_info</string>
+    <string name="pref_key_open_store">pref_key_store</string>
+
+    <!-- Other Preferences -->
+    <string name="pref_key_previous_host">pref_key_previous_host</string>
+
+    <!-- Default -->
+    <bool name="pref_default_show_success_message">false</bool>
+    <bool name="pref_default_show_failure_message">true</bool>
+
+    <!-- Const -->
+    <string name="empty_value" />
+
+</resources>

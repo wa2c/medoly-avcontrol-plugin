@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ipInputEditTextContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/dialog_horizontal_margin"
+        android:paddingTop="@dimen/dialog_vertical_margin"
+        android:paddingEnd="@dimen/dialog_horizontal_margin"
+        android:paddingBottom="@dimen/dialog_vertical_margin">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dialog_host_input_text_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dialog_host_input_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/dialog_host_input_hint"
+                android:inputType="textWebEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/dialog_host_input_copy_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="?attr/actionModeCopyDrawable"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_host_input_text_layout" />
+
+        <TextView
+            android:id="@+id/dialog_host_input_device_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_host_input_device"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_host_input_copy_button" />
+
+        <Spinner
+            android:id="@+id/dialog_host_input_device_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_host_input_device_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
