@@ -16,36 +16,6 @@ class YamahaAvRepository(
     private val preferences: AppPreferences
 ) {
 
-//    /**
-//     * Discover devices
-//     */
-//    suspend fun discoverDevices(): Map<String, String> {
-//        return suspendCoroutine { continuation ->
-//            val networkStorageDevice = SsdpRequest.builder()
-//                .serviceType("urn:schemas-upnp-org:device:MediaRenderer:1")
-//                .build()
-//            SsdpClient.create().discoverServices(networkStorageDevice, object : DiscoveryListener {
-//                override fun onFailed(e: Exception) {
-//                    logE(e)
-//                    continuation.resume(emptyMap())
-//                }
-//
-//                override fun onServiceDiscovered(service: SsdpService) {
-//                    println("Found service: $service")
-//                    val header = service.originalResponse.headers.get("X-MODELNAME")
-//                    logD(service)
-//                    continuation.resume(emptyMap())
-//                }
-//
-//                override fun onServiceAnnouncement(announcement: SsdpServiceAnnouncement) {
-//                    println("Service announced something: $announcement")
-//                    logD(announcement)
-//                }
-//            })
-//            return@suspendCoroutine
-//        }
-//    }
-
     /**
      * Select input
      */

@@ -30,7 +30,7 @@
             android:exported="true"
             android:icon="@drawable/ic_bluetooth"
             android:label="@string/label_execute_set_bluetooth">
-            <intent-filter android:priority="129">
+            <intent-filter android:priority="122">
                 <action android:name="com.wa2c.android.medoly.plugin.action.ACTION_MEDIA" />
 
                 <category android:name="com.wa2c.android.medoly.plugin.category.TYPE_RUN" />
