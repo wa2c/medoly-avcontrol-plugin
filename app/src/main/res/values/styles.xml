@@ -8,6 +8,14 @@
         <item name="android:navigationBarColor">@color/navigationBarColor</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:colorAccent">@color/colorAccent</item>
+
+        <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+    </style>
+
+    <style name="ActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetLeft">0dp</item>
     </style>
 
 </resources>
