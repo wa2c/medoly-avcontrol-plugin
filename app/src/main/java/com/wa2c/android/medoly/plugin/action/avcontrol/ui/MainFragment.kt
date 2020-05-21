@@ -51,7 +51,7 @@ class MainFragment : PreferenceFragmentCompat() {
             it.setDisplayShowHomeEnabled(true)
             it.setDisplayHomeAsUpEnabled(false)
             it.setDisplayShowTitleEnabled(true)
-            it.setIcon(R.mipmap.ic_launcher)
+            it.setIcon(R.drawable.ic_launcher_home)
             it.setTitle(R.string.screen_title_main)
         }
     }

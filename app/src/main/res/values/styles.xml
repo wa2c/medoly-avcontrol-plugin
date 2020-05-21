@@ -16,6 +16,8 @@
     <style name="ActionBarStyle" parent="Widget.AppCompat.ActionBar">
         <item name="contentInsetStart">0dp</item>
         <item name="contentInsetLeft">0dp</item>
+        <item name="android:contentInsetLeft">0dp</item>
+        <item name="android:contentInsetStart">0dp</item>
     </style>
 
 </resources>
