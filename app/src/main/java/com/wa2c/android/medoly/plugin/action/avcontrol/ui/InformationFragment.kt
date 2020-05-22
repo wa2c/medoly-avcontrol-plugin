@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
+import com.wa2c.android.medoly.plugin.action.avcontrol.BuildConfig
 import com.wa2c.android.medoly.plugin.action.avcontrol.R
 import com.wa2c.android.medoly.plugin.action.avcontrol.source.local.AppPreferences
 import com.wa2c.android.medoly.plugin.action.avcontrol.ui.component.preference
@@ -95,6 +96,6 @@ class InformationFragment : PreferenceFragmentCompat() {
      * Update summary
      */
     private fun updateSummary() {
-        preference<Preference>(R.string.pref_key_info_app_version)?.summary = "1.0"
+        preference<Preference>(R.string.pref_key_info_app_version)?.summary = BuildConfig.VERSION_NAME
     }
 }
