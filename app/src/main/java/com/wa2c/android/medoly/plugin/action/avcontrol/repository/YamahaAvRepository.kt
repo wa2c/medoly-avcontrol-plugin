@@ -10,6 +10,9 @@ import com.wa2c.android.medoly.plugin.action.avcontrol.source.network.data.MainZ
 import com.wa2c.android.medoly.plugin.action.avcontrol.value.CtrlCmd
 import com.wa2c.android.medoly.plugin.action.avcontrol.value.CtrlInput
 
+/**
+ * Yamaha AV receiver repository.
+ */
 class YamahaAvRepository(
     private val remoteApi: YamahaRemoteControlApi,
     private val extendedApi: YamahaExtendedControlApi,

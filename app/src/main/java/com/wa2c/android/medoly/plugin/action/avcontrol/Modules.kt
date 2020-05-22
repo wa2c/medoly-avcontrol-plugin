@@ -4,10 +4,10 @@ import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFact
 import com.tickaroo.tikxml.TikXml
 import com.tickaroo.tikxml.retrofit.TikXmlConverterFactory
 import com.wa2c.android.medoly.plugin.action.avcontrol.repository.YamahaAvRepository
+import com.wa2c.android.medoly.plugin.action.avcontrol.source.local.AppPreferences
 import com.wa2c.android.medoly.plugin.action.avcontrol.source.network.ApiInterceptor
 import com.wa2c.android.medoly.plugin.action.avcontrol.source.network.api.YamahaExtendedControlApi
 import com.wa2c.android.medoly.plugin.action.avcontrol.source.network.api.YamahaRemoteControlApi
-import com.wa2c.android.medoly.plugin.action.avcontrol.source.local.AppPreferences
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonConfiguration
 import okhttp3.MediaType.Companion.toMediaType
@@ -20,12 +20,18 @@ import retrofit2.create
 
 // Factory method
 
+/**
+ * OkHTTP
+ */
 private fun createHttpClient(): OkHttpClient {
     return OkHttpClient.Builder()
         .addInterceptor(ApiInterceptor())
         .build()
 }
 
+/**
+ * Retrofit for Yamaha AV receiver API.
+ */
 private fun createYamahaRemoteControlApi(
     okHttpClient: OkHttpClient,
     preferences: AppPreferences
@@ -42,6 +48,9 @@ private fun createYamahaRemoteControlApi(
     return retrofit.create()
 }
 
+/**
+ * Retrofit for Yamaha AV receiver extended API.
+ */
 private fun createYamahaExtendedControlApi(
     okHttpClient: OkHttpClient,
     preferences: AppPreferences

@@ -7,6 +7,9 @@ import androidx.navigation.fragment.NavHostFragment
 import com.wa2c.android.medoly.plugin.action.avcontrol.R
 import com.wa2c.android.medoly.plugin.action.avcontrol.common.logD
 
+/**
+ * Main activity
+ */
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private lateinit var navController: NavController

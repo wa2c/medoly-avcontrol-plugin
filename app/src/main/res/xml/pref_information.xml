@@ -3,7 +3,6 @@
 
     <Preference
         android:key="@string/pref_key_info_app_version"
-        android:selectable="false"
         android:summary="@string/pref_summary_info_app_version"
         android:title="@string/pref_title_info_app_version" />
 

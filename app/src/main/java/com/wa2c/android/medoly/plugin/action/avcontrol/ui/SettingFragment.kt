@@ -13,7 +13,6 @@ import com.wa2c.android.medoly.plugin.action.avcontrol.ui.component.setListener
 import com.wa2c.android.medoly.plugin.action.avcontrol.ui.component.updatePrefSummary
 import com.wa2c.android.medoly.plugin.action.avcontrol.ui.dialog.HostInputDialog
 
-
 /**
  * Setting fragment
  */

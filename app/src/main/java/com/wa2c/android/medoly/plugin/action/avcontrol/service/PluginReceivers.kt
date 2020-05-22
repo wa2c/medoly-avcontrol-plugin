@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import com.wa2c.android.medoly.library.PluginBroadcastResult
 import com.wa2c.android.medoly.plugin.action.avcontrol.R
+import com.wa2c.android.medoly.plugin.action.avcontrol.common.logD
 import com.wa2c.android.medoly.plugin.action.avcontrol.common.showToast
 import com.wa2c.android.medoly.plugin.action.avcontrol.repository.YamahaAvRepository
 import com.wa2c.android.medoly.plugin.action.avcontrol.source.local.AppPreferences
@@ -12,7 +13,6 @@ import com.wa2c.android.medoly.plugin.action.avcontrol.value.CtrlInput
 import kotlinx.coroutines.runBlocking
 import org.koin.core.KoinComponent
 import org.koin.core.inject
-import timber.log.Timber
 
 /**
  * Execute receiver.
@@ -23,7 +23,7 @@ abstract class AbstractPluginReceiver : BroadcastReceiver(), KoinComponent {
     private val avRepository: YamahaAvRepository by inject()
 
     override fun onReceive(context: Context, intent: Intent) {
-        Timber.d("onReceive: %s", this.javaClass.simpleName)
+        logD("onReceive: %s", this.javaClass.simpleName)
         val result = receive()
         if (result == PluginBroadcastResult.COMPLETE) {
             if (preferences.showSuccessMessage) context.showToast(R.string.action_succeeded_message)
