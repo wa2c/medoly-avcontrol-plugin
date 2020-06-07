@@ -32,7 +32,7 @@ fun PreferenceFragmentCompat.updatePrefSummary(prefKey: String, force: Boolean =
         is ListPreference -> {
             // ListPreference
             p.value = p.sharedPreferences.getString(p.key, "")
-            setSummaryValue(p, p.entry)
+            p.setSummaryValue(p.entry)
         }
         is MultiSelectListPreference -> {
             // MultiSelectListPreference
@@ -48,18 +48,18 @@ fun PreferenceFragmentCompat.updatePrefSummary(prefKey: String, force: Boolean =
                     text = builder.substring(0, builder.length - 1) // remove end comma
                 }
             }
-            setSummaryValue(p, text)
+            p.setSummaryValue(text)
         }
         is EditTextPreference -> {
             // EditTextPreference
             val text = p.sharedPreferences.getString(p.key, "")
             p.text = text // update once
-            setSummaryValue(p, text)
+            p.setSummaryValue(text)
         }
         else -> {
             if (force) {
                 val text = p.sharedPreferences.getString(p.key, "")
-                setSummaryValue(p, text)
+                p.setSummaryValue(text)
             }
         }
     }
@@ -68,14 +68,14 @@ fun PreferenceFragmentCompat.updatePrefSummary(prefKey: String, force: Boolean =
 /**
  * Add value on preference summary.
  */
-private fun setSummaryValue(p: Preference, value: CharSequence?) {
+private fun Preference.setSummaryValue(value: CharSequence?) {
     val mask = "********"
     val escapeMask = """\*\*\*\*\*\*\*\*"""
-    val literal = (p.context.getString(R.string.pref_summary_current_value, mask)).let {
+    val literal = (this.context.getString(R.string.pref_summary_current_value, mask)).let {
         val from = Regex("(?!\\\\)(\\W)").replace(it, "\\\\\$1") // NOTE: Escape regex characters
         from.replace(escapeMask, ".*")
     }
-    val plainSummary = Regex("\n$literal$").replace(p.summary, "")
-    val valueSummary = p.context.getString(R.string.pref_summary_current_value, value ?: "")
-    p.summary = plainSummary + "\n" + valueSummary
+    val plainSummary = Regex("\n$literal$").replace(this.summary, "")
+    val valueSummary = this.context.getString(R.string.pref_summary_current_value, value ?: "")
+    this.summary = plainSummary + "\n" + valueSummary
 }
