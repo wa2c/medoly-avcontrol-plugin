@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.wa2c.android.medoly.plugin.action.avcontrol">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:name="com.wa2c.android.medoly.plugin.action.avcontrol.App"
-        android:allowBackup="true"
+        android:name=".App"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,UnusedAttribute">
 
-        <activity android:name="com.wa2c.android.medoly.plugin.action.avcontrol.ui.MainActivity">
+
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             </intent-filter>
         </activity>
 
+        <service
+            android:name=".service.PluginService"
+            android:exported="false" />
+
         <!-- Set bluetooth -->
         <receiver
-            android:name="com.wa2c.android.medoly.plugin.action.avcontrol.service.ExecuteSetBluetoothReceiver"
+            android:name=".service.ExecuteSetBluetoothReceiver"
             android:exported="true"
             android:icon="@drawable/ic_bluetooth"
             android:label="@string/label_execute_set_bluetooth">
@@ -40,7 +48,7 @@
 
         <!-- Reset input -->
         <receiver
-            android:name="com.wa2c.android.medoly.plugin.action.avcontrol.service.ExecuteResetReceiver"
+            android:name=".service.ExecuteResetReceiver"
             android:exported="true"
             android:icon="@drawable/ic_reset"
             android:label="@string/label_execute_reset_input">
@@ -52,11 +60,9 @@
                 <category android:name="com.wa2c.android.medoly.plugin.category.OPERATION_EXECUTE" />
             </intent-filter>
         </receiver>
-
         <receiver
-            android:name="com.wa2c.android.medoly.plugin.action.avcontrol.common.ToastReceiver"
+            android:name=".common.ToastReceiver"
             android:exported="false" />
-
     </application>
 
 </manifest>

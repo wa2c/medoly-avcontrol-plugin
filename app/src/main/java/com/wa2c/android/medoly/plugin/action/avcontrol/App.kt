@@ -1,6 +1,7 @@
 package com.wa2c.android.medoly.plugin.action.avcontrol
 
 import android.app.Application
+import com.wa2c.android.medoly.plugin.action.avcontrol.service.PluginService
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -20,6 +21,9 @@ class App : Application() {
             androidContext(this@App)
             modules(Module.modules)
         }
+
+        // Create channel
+        PluginService.createChannel(this)
     }
 
 }
