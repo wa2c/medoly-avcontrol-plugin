@@ -18,6 +18,7 @@ import com.wa2c.android.medoly.plugin.action.avcontrol.source.local.AppPreferenc
 import com.wa2c.android.medoly.plugin.action.avcontrol.value.CtrlInput
 import kotlinx.coroutines.runBlocking
 import org.koin.android.ext.android.inject
+import org.koin.core.component.KoinApiExtension
 import java.io.InvalidObjectException
 
 class PluginService : IntentService("PluginService") {
@@ -34,6 +35,7 @@ class PluginService : IntentService("PluginService") {
     /** AV Repository */
     private val avRepository: YamahaAvRepository by inject()
 
+    @KoinApiExtension
     override fun onHandleIntent(intent: Intent?) {
         logD("onHandleIntent")
         val result = try {

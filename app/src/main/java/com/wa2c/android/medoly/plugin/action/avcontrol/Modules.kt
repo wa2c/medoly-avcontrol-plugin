@@ -8,15 +8,14 @@ import com.wa2c.android.medoly.plugin.action.avcontrol.source.local.AppPreferenc
 import com.wa2c.android.medoly.plugin.action.avcontrol.source.network.ApiInterceptor
 import com.wa2c.android.medoly.plugin.action.avcontrol.source.network.api.YamahaExtendedControlApi
 import com.wa2c.android.medoly.plugin.action.avcontrol.source.network.api.YamahaRemoteControlApi
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonConfiguration
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.module.Module
 import org.koin.dsl.module
 import retrofit2.Retrofit
-import retrofit2.create
 
 // Factory method
 
@@ -45,7 +44,7 @@ private fun createYamahaRemoteControlApi(
         .client(okHttpClient)
         .addConverterFactory(converter)
         .build()
-    return retrofit.create()
+    return retrofit.create(YamahaRemoteControlApi::class.java)
 }
 
 /**
@@ -57,14 +56,13 @@ private fun createYamahaExtendedControlApi(
 ): YamahaExtendedControlApi {
     val avAddress = preferences.hostAddress ?: "localhost"
     val baseUrl = "http://$avAddress/YamahaExtendedControl/v1/system/"
-    val config = JsonConfiguration(encodeDefaults = false, ignoreUnknownKeys = true)
-    val converter = Json(config).asConverterFactory("application/json".toMediaType())
+    val converter = Json { encodeDefaults = false; ignoreUnknownKeys = true }.asConverterFactory("application/json".toMediaType())
     val retrofit = Retrofit.Builder()
         .baseUrl(baseUrl)
         .client(okHttpClient)
         .addConverterFactory(converter)
         .build()
-    return retrofit.create()
+    return retrofit.create(YamahaExtendedControlApi::class.java)
 }
 
 // Modules
