@@ -4,6 +4,7 @@
     <string name="app_description">YAMAHA AVアンプの入力ソースを切り替えます。</string>
     <string name="label_execute_set_bluetooth">Bluetooth選択</string>
     <string name="label_execute_reset_input">入力ソースを戻す</string>
+    <string name="app_manual_url">https://github.com/wa2c/medoly-avcontrol-plugin/wiki/Home-ja</string>
     <string name="app_version_url">https://github.com/wa2c/medoly-avcontrol-plugin/wiki/History-ja</string>
     <string name="app_privacy_policy_url">https://github.com/wa2c/medoly-avcontrol-plugin/wiki/Privacy-Policy-ja</string>
 
@@ -44,6 +45,8 @@
     <string name="pref_summary_info_app_version" />
     <string name="pref_title_open_author">開発者</string>
     <string name="pref_summary_open_author">@string/app_author</string>
+    <string name="pref_title_open_manual">マニュアル</string>
+    <string name="pref_summary_open_manual">マニュアルを表示します。</string>
     <string name="pref_title_open_app_license">ライセンス</string>
     <string name="pref_summary_open_app_license">@string/app_license</string>
     <string name="pref_title_open_library_license">オープンソースライセンス</string>

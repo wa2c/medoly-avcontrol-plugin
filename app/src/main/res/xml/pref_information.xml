@@ -12,6 +12,11 @@
         android:title="@string/pref_title_open_author" />
 
     <Preference
+        android:key="@string/pref_key_open_manual"
+        android:summary="@string/pref_summary_open_manual"
+        android:title="@string/pref_title_open_manual" />
+
+    <Preference
         android:key="@string/pref_key_open_app_license"
         android:summary="@string/pref_summary_open_app_license"
         android:title="@string/pref_title_open_app_license" />
