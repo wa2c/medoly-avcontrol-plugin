@@ -4,7 +4,8 @@
     <string name="app_description">Change YAMAHA AV receiver input source.</string>
     <string name="label_execute_set_bluetooth">Select Bluetooth</string>
     <string name="label_execute_reset_input">Reset Input</string>
-    <string name="app_version_url">https://www.wa2c.com/documents/dokuwiki/doku.php?id=en:medoly_av_control_plugin:history</string>
+    <string name="app_version_url">https://github.com/wa2c/medoly-avcontrol-plugin/wiki/History</string>
+    <string name="app_privacy_policy_url">https://github.com/wa2c/medoly-avcontrol-plugin/wiki/Privacy-Policy</string>
 
     <!-- Screen -->
     <string name="screen_title_main">@string/app_name</string>

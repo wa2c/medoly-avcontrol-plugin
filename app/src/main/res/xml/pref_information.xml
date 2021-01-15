@@ -21,12 +21,10 @@
         android:summary="@string/pref_summary_open_library_license"
         android:title="@string/pref_title_open_library_license" />
 
-    <!--
     <Preference
         android:key="@string/pref_key_open_privacy_policy"
         android:summary="@string/pref_summary_open_privacy_policy"
         android:title="@string/pref_title_open_privacy_policy" />
-    -->
 
     <Preference
         android:key="@string/pref_key_open_info_app"

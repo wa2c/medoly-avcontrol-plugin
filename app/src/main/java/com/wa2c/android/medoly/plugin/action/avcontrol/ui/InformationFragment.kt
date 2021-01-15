@@ -66,6 +66,12 @@ class InformationFragment : PreferenceFragmentCompat() {
             }
         }
 
+        setListener(R.string.pref_key_open_privacy_policy) {
+            Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.app_privacy_policy_url))).let {
+                startActivity(it)
+            }
+        }
+
         setListener(R.string.pref_key_open_app_license) {
             Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.app_license_url))).let {
                 it.putExtra("title", getString(R.string.pref_title_open_library_license))
