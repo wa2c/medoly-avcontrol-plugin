@@ -22,8 +22,8 @@
 
     <!-- Info Preferences -->
     <string name="pref_key_info_app_version">pref_key_app_version</string>
-    <string name="pref_key_open_manual">pref_key_open_manual</string>
     <string name="pref_key_open_author">pref_key_app_author</string>
+    <string name="pref_key_open_manual">pref_key_open_manual</string>
     <string name="pref_key_open_app_license">pref_key_license</string>
     <string name="pref_key_open_library_license">pref_key_library_license</string>
     <string name="pref_key_open_privacy_policy">pref_key_privacy_policy</string>
