@@ -5,7 +5,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:name=".App"
@@ -51,7 +50,7 @@
 
         <!-- Reset input -->
         <receiver
-            android:name=".service.ExecuteResetReceiver"
+            android:name=".service.ExecuteResetBluetoothReceiver"
             android:exported="true"
             android:icon="@drawable/ic_reset"
             android:label="@string/label_execute_reset_input"
@@ -67,6 +66,12 @@
         <receiver
             android:name=".common.ToastReceiver"
             android:exported="false" />
+
+        <!-- for Worker injection -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            tools:node="remove" />
 
     </application>
 

@@ -56,7 +56,7 @@ class PluginService : IntentService("PluginService") {
                     selectBluetooth()
                     true
                 }
-                ExecuteResetReceiver::class.java.name -> {
+                ExecuteResetBluetoothReceiver::class.java.name -> {
                     resetInput()
                     true
                 }
