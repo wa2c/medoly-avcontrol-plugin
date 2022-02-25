@@ -2,27 +2,27 @@
 
 buildscript {
     ext {
-        kotlin_version = '1.4.21'
-        coroutine_version = '1.4.1'
-        navigation_version = '2.3.2'
+        kotlin_version = '1.6.10'
+        coroutine_version = '1.6.0'
+        navigation_version = '2.4.1'
         okhttp_version = '4.9.0'
-        tikxml_version = '0.8.13'
+        tikxml_version = '0.8.15'
         koin_version = '2.2.1'
     }
 
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven { url 'https://maven.fabric.io/public' }
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.1'
+        classpath 'com.android.tools.build:gradle:7.1.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation_version"
-        classpath 'com.google.gms:google-services:4.3.4'
-        classpath 'com.google.android.gms:oss-licenses-plugin:0.10.2'
+        classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'com.google.android.gms:oss-licenses-plugin:0.10.4'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -32,7 +32,7 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 
