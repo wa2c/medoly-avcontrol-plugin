@@ -13,15 +13,11 @@ import androidx.fragment.app.FragmentActivity
  */
 abstract class AbstractDialogFragment : DialogFragment() {
 
-    /** The called activity.  */
-    protected lateinit var context: FragmentActivity
-
     /** Click listener. */
     var clickListener: ((dialog: DialogInterface?, which: Int, bundle: Bundle?) -> Unit)? = null
 
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        context = requireActivity()
         return super.onCreateDialog(savedInstanceState)
     }
 

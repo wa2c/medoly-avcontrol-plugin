@@ -7,14 +7,11 @@ import androidx.core.content.ContextCompat
 import com.wa2c.android.medoly.library.MediaPluginIntent
 import com.wa2c.android.medoly.library.PluginBroadcastResult
 import com.wa2c.android.medoly.plugin.action.avcontrol.common.logD
-import org.koin.core.component.KoinApiExtension
-import org.koin.core.component.KoinComponent
 
 /**
  * Execute receiver.
  */
-@KoinApiExtension
-abstract class AbstractPluginReceiver : BroadcastReceiver(), KoinComponent {
+abstract class AbstractPluginReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         logD("onReceive: %s", this.javaClass.simpleName)
@@ -30,8 +27,6 @@ abstract class AbstractPluginReceiver : BroadcastReceiver(), KoinComponent {
 
 // Execution
 
-@KoinApiExtension
 class ExecuteSetBluetoothReceiver : AbstractPluginReceiver()
 
-@KoinApiExtension
 class ExecuteResetReceiver : AbstractPluginReceiver()

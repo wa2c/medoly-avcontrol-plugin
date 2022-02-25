@@ -3,11 +3,17 @@ package com.wa2c.android.medoly.plugin.action.avcontrol.source.local
 import android.content.Context
 import com.wa2c.android.medoly.plugin.action.avcontrol.R
 import com.wa2c.android.prefs.Prefs
+import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
+import javax.inject.Singleton
 
 /**
  * App preferences.
  */
-class AppPreferences(context: Context) {
+@Singleton
+class AppPreferences @Inject constructor(
+    @ApplicationContext private val context: Context
+) {
 
     private val prefs: Prefs = Prefs(context, FILE_NAME)
 

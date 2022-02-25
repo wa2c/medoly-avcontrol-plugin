@@ -16,16 +16,18 @@ import com.wa2c.android.medoly.plugin.action.avcontrol.common.logE
 import com.wa2c.android.medoly.plugin.action.avcontrol.common.showToast
 import com.wa2c.android.medoly.plugin.action.avcontrol.databinding.DialogHostInputBinding
 import com.wa2c.android.medoly.plugin.action.avcontrol.source.local.AppPreferences
+import dagger.hilt.android.AndroidEntryPoint
 import io.resourcepool.ssdp.client.SsdpClient
 import io.resourcepool.ssdp.model.DiscoveryListener
 import io.resourcepool.ssdp.model.SsdpRequest
 import io.resourcepool.ssdp.model.SsdpService
 import io.resourcepool.ssdp.model.SsdpServiceAnnouncement
-import org.koin.android.ext.android.inject
+import javax.inject.Inject
 
 /**
  * Host input dialog
  */
+@AndroidEntryPoint
 class HostInputDialog : AbstractDialogFragment() {
 
     private val binding: DialogHostInputBinding by lazy {
@@ -36,7 +38,9 @@ class HostInputDialog : AbstractDialogFragment() {
             false
         )
     }
-    private val preferences: AppPreferences by inject()
+
+    @Inject
+    lateinit var preferences: AppPreferences
 
     /** SSDP client. */
     private val client: SsdpClient = SsdpClient.create()
@@ -81,7 +85,7 @@ class HostInputDialog : AbstractDialogFragment() {
         }
 
         // Build
-        return AlertDialog.Builder(context).apply {
+        return AlertDialog.Builder(requireContext()).apply {
             setTitle(R.string.dialog_host_input_title)
             setView(binding.root)
             setPositiveButton(android.R.string.ok, null)
@@ -121,7 +125,7 @@ class HostInputDialog : AbstractDialogFragment() {
         client.discoverServices(networkStorageDevice, object : DiscoveryListener {
             override fun onFailed(e: Exception) {
                 logE(e)
-                context.showToast(R.string.detect_device_failed)
+                context?.showToast(R.string.detect_device_failed)
             }
 
             override fun onServiceDiscovered(service: SsdpService) {

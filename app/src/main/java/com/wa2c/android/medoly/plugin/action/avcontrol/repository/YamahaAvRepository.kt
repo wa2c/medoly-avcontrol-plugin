@@ -9,11 +9,14 @@ import com.wa2c.android.medoly.plugin.action.avcontrol.source.network.data.Input
 import com.wa2c.android.medoly.plugin.action.avcontrol.source.network.data.MainZoneReq
 import com.wa2c.android.medoly.plugin.action.avcontrol.value.CtrlCmd
 import com.wa2c.android.medoly.plugin.action.avcontrol.value.CtrlInput
+import javax.inject.Inject
+import javax.inject.Singleton
 
 /**
  * Yamaha AV receiver repository.
  */
-class YamahaAvRepository(
+@Singleton
+class YamahaAvRepository @Inject constructor(
     private val remoteApi: YamahaRemoteControlApi,
     private val extendedApi: YamahaExtendedControlApi,
     private val preferences: AppPreferences

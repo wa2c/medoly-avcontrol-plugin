@@ -6,14 +6,17 @@ buildscript {
         coroutine_version = '1.6.0'
         navigation_version = '2.4.1'
         okhttp_version = '4.9.0'
-        tikxml_version = '0.8.15'
+        tikxml_version = '0.8.13'
         koin_version = '2.2.1'
+        dagger_version = '2.40.5'
     }
 
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://maven.fabric.io/public' }
+        maven {
+            url 'https://maven.fabric.io/public'
+        }
     }
 
     dependencies {
@@ -21,6 +24,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation_version"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$dagger_version"
         classpath 'com.google.gms:google-services:4.3.10'
         classpath 'com.google.android.gms:oss-licenses-plugin:0.10.4'
 
