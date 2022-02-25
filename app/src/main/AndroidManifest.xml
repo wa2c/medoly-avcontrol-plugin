@@ -20,8 +20,7 @@
 
         <activity
             android:name=".ui.MainActivity"
-            android:exported="true"
-            >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -40,7 +39,8 @@
             android:name=".service.ExecuteSetBluetoothReceiver"
             android:exported="true"
             android:icon="@drawable/ic_bluetooth"
-            android:label="@string/label_execute_set_bluetooth">
+            android:label="@string/label_execute_set_bluetooth"
+            tools:ignore="ExportedReceiver">
             <intent-filter android:priority="122">
                 <action android:name="com.wa2c.android.medoly.plugin.action.ACTION_MEDIA" />
 
@@ -54,18 +54,20 @@
             android:name=".service.ExecuteResetReceiver"
             android:exported="true"
             android:icon="@drawable/ic_reset"
-            android:label="@string/label_execute_reset_input">
+            android:label="@string/label_execute_reset_input"
+            tools:ignore="ExportedReceiver">
             <intent-filter android:priority="121">
                 <action android:name="com.wa2c.android.medoly.plugin.action.ACTION_MEDIA" />
 
-                <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="com.wa2c.android.medoly.plugin.category.TYPE_RUN" />
                 <category android:name="com.wa2c.android.medoly.plugin.category.OPERATION_EXECUTE" />
             </intent-filter>
         </receiver>
+
         <receiver
             android:name=".common.ToastReceiver"
             android:exported="false" />
+
     </application>
 
 </manifest>

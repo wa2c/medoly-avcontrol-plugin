@@ -37,29 +37,6 @@ android {
     buildFeatures {
         dataBinding = true
     }
-
-    // output file
-    applicationVariants.all { variant ->
-        if (variant.buildType.name == "release") {
-            def newName = "MedolyAVControlPlugin_${defaultConfig.versionName}"
-            variant.outputs.all {
-                // filename
-                outputFileName = "${newName}.apk"
-                // mapping
-                variant.assembleProvider.get().doLast {
-                    if ( variant.mappingFile != null && variant.mappingFile.exists() ) {
-                        copy {
-                            from variant.mappingFile
-                            into outputFile.parent
-                            rename { String fileName ->
-                                "${newName}_mapping.txt"
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 
 repositories {
@@ -84,7 +61,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
 
     // Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
 
@@ -107,15 +83,12 @@ dependencies {
     implementation "com.tickaroo.tikxml:annotation:$tikxml_version"
     implementation "com.tickaroo.tikxml:core:$tikxml_version"
     implementation "com.tickaroo.tikxml:retrofit-converter:$tikxml_version"
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt "com.tickaroo.tikxml:processor:$tikxml_version"
 
     // SSDP Client
     implementation 'io.resourcepool:ssdp-client:2.4.5'
     // Timber
     implementation 'com.jakewharton.timber:timber:4.7.1'
-    // Dynamic Toasts
-    implementation 'com.pranavpandey.android:dynamic-toasts:4.1.0'
     // OSS Licenses Gradle Plugin
     implementation 'com.google.android.gms:play-services-oss-licenses:17.0.0'
 

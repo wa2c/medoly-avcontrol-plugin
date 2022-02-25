@@ -1,6 +1,5 @@
 package com.wa2c.android.medoly.plugin.action.avcontrol.ui.dialog
 
-import android.app.Dialog
 import android.content.DialogInterface
 import android.content.res.Configuration
 import android.os.Bundle
@@ -16,10 +15,6 @@ abstract class AbstractDialogFragment : DialogFragment() {
     /** Click listener. */
     var clickListener: ((dialog: DialogInterface?, which: Int, bundle: Bundle?) -> Unit)? = null
 
-
-    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        return super.onCreateDialog(savedInstanceState)
-    }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)

@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.AdapterView
@@ -46,7 +47,7 @@ class HostInputDialog : AbstractDialogFragment() {
     private val client: SsdpClient = SsdpClient.create()
 
     /** Handler */
-    private val handler = Handler()
+    private val handler = Handler(Looper.getMainLooper())
 
     /** Adapter */
     private val adapter: ArrayAdapter<String> by lazy {
@@ -55,7 +56,7 @@ class HostInputDialog : AbstractDialogFragment() {
             android.R.layout.simple_spinner_item,
             mutableListOf()
         ).also {
-            it.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            it.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         }
     }
 
@@ -132,7 +133,7 @@ class HostInputDialog : AbstractDialogFragment() {
                 logD(service)
                 val names = service.originalResponse.headers[X_MODELNAME]?.split(":") ?: return
                 val name = names.getOrNull(2) ?: names.getOrNull(0) ?: return
-                val address = service.remoteIp.hostAddress
+                val address = service.remoteIp.hostAddress ?: return
                 handler.post {
                     addItem(address, name)
                 }
