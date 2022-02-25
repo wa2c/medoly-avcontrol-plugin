@@ -16,7 +16,6 @@
         android:usesCleartextTraffic="true"
         tools:ignore="UnusedAttribute">
 
-
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">
@@ -28,10 +27,6 @@
                 <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             </intent-filter>
         </activity>
-
-        <service
-            android:name=".service.PluginService"
-            android:exported="false" />
 
         <!-- Set bluetooth -->
         <receiver
