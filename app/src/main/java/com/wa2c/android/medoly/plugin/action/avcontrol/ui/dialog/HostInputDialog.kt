@@ -32,7 +32,7 @@ import javax.inject.Inject
 class HostInputDialog : AbstractDialogFragment() {
 
     private val binding: DialogHostInputBinding by lazy {
-        DataBindingUtil.inflate<DialogHostInputBinding>(
+        DataBindingUtil.inflate(
             LayoutInflater.from(activity),
             R.layout.dialog_host_input,
             null,

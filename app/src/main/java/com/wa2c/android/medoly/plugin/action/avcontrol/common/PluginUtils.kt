@@ -8,7 +8,6 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.work.Data
 import androidx.work.ForegroundInfo
-import androidx.work.WorkerParameters
 import androidx.work.impl.utils.futures.SettableFuture
 import com.google.common.util.concurrent.ListenableFuture
 import com.wa2c.android.medoly.library.MediaPluginIntent
@@ -25,14 +24,6 @@ private const val INTENT_ACTION_IS_AUTOMATICALLY = "INTENT_ACTION_IS_AUTOMATICAL
 private const val NOTIFICATION_ID = 1
 /** Notification Channel ID */
 private const val NOTIFICATION_CHANNEL_ID = "Notification"
-
-/** Src package */
-val WorkerParameters.srcPackage: String?
-    get() = inputData.getString(INTENT_SRC_PACKAGE)
-
-/** True if the action was run automatically. */
-val WorkerParameters.isAutomaticallyAction: Boolean
-    get() = inputData.getBoolean(INTENT_ACTION_IS_AUTOMATICALLY, false)
 
 /**
  * Create WorkParams data from plugin intent.
